@@ -4,132 +4,164 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Isha Sethia | Bridal & Party Makeup Artist in Jaipur</title>
-<meta name="description" content="Bridal, engagement and party makeup by Isha Sethia. Studio or at-home service across Jaipur.">
+<meta name="description" content="Bridal, party, engagement and occasion makeup by Isha Sethia in Jaipur. Explore makeup services and enquire about your date.">
+<meta name="theme-color" content="#fbf6f1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#2a1a1d;--rose:#b76e79;--gold:#c9a36b;--cream:#fbf6f1;--blush:#f3e3dc;--wa:#1fa855}
+:root{--ink:#2a1a1d;--rose:#b76e79;--gold:#c9a36b;--cream:#fbf6f1;--blush:#f3e3dc;--wa:#1fa855;--muted:#6b5555;--line:#eadbd2}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
 body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.2}
 img,video{max-width:100%;display:block}
+a{color:inherit}
 .wrap{max-width:1100px;margin:auto;padding:0 20px}
-section{padding:64px 0}
+section{padding:68px 0;scroll-margin-top:110px}
 .eyebrow{color:var(--rose);letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;font-weight:600;margin-bottom:8px}
-.title{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:12px}
-.lead{color:#6b5555;max-width:560px;margin-bottom:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--rose);color:#fff;border:0;border-radius:999px;padding:13px 26px;font:500 .95rem 'Poppins',sans-serif;text-decoration:none;cursor:pointer;transition:.2s}
+.title{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:620px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--rose);color:#fff;border:0;border-radius:999px;padding:13px 25px;font:500 .94rem 'Poppins',sans-serif;text-decoration:none;cursor:pointer;transition:transform .2s,filter .2s}
 .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
 .btn.wa{background:var(--wa)}
-.btn.ghost{background:transparent;border:1.5px solid #fff}
+.btn.ghost{background:transparent;border:1.5px solid #fff;color:#fff}
 
-/* Header */
-header{position:sticky;top:0;z-index:50;background:rgba(251,246,241,.93);backdrop-filter:blur(10px);border-bottom:1px solid #eadbd2}
-.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+/* Sticky header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,241,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.brand b{font:600 1.15rem 'Playfair Display',serif;display:block;line-height:1.1}
+.brand b{font:600 1.2rem 'Playfair Display',serif;display:block;line-height:1.1}
 .brand small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
-nav{display:flex;gap:22px;align-items:center}
-nav a{color:var(--ink);text-decoration:none;font-size:.88rem}
-.menu{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+nav{display:flex;gap:21px;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-size:.87rem}
+nav a:hover{color:var(--rose)}
+.menu{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer;color:var(--ink);padding:6px}
 @media(max-width:820px){
+ .bar{height:70px}
+ .brand svg{width:42px;height:42px}
  .menu{display:block}
- nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;padding:18px 20px;border-bottom:1px solid #eadbd2}
+ nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;gap:16px;padding:18px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #2a1a1d12}
  nav.open{display:flex}
 }
 
 /* Hero */
-.hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;background:linear-gradient(135deg,#3a2227,#8c4a56 55%,#c9a36b);overflow:hidden;padding:0}
+.hero{position:relative;min-height:84vh;display:flex;align-items:center;color:#fff;background:linear-gradient(135deg,#3a2227,#8c4a56 55%,#c9a36b);overflow:hidden;padding:0}
 .hero>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,15,18,.45),rgba(30,15,18,.72))}
-.hero .wrap{position:relative;z-index:2;padding-top:50px;padding-bottom:50px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,15,18,.43),rgba(30,15,18,.7))}
+.hero .wrap{position:relative;z-index:2;padding-top:58px;padding-bottom:58px}
 .hero .eyebrow{color:var(--gold)}
-.hero h1{font-size:clamp(2.2rem,6vw,3.9rem);max-width:720px;margin-bottom:16px}
-.hero p.sub{max-width:520px;margin-bottom:28px;font-weight:300;font-size:1.05rem}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);max-width:720px;margin-bottom:16px}
+.hero p.sub{max-width:560px;margin-bottom:26px;font-weight:300;font-size:1.05rem}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
+.scroll-hint{margin-top:30px;font-size:.76rem;letter-spacing:.04em;color:#fffC}
 
-/* Badges */
-.badges{padding:26px 0;background:#fff;border-bottom:1px solid #f0e2da}
-.badges .wrap{display:flex;justify-content:space-around;gap:16px;flex-wrap:wrap;text-align:center;font-size:.9rem;font-weight:500}
-.badges span{color:var(--rose)}
+/* Approved bridal offer strip */
+.offer-strip{background:#fff;border-bottom:1px solid #f0e2da;padding:16px 0}
+.offer-inner{display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;text-align:center}
+.offer-kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-weight:600}
+.offer-copy{font:600 1.12rem 'Playfair Display',serif;color:var(--ink)}
+.offer-copy strong{color:var(--rose)}
+.offer-link{font-size:.78rem;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
 
-/* Gallery and reels */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.ph{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#ead9d0,#d9b9ae);display:flex;align-items:flex-end;justify-content:center;color:#8a5a63;font-size:.8rem;padding:12px;text-align:center;margin:0}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.4s}
-.ph:hover img{transform:scale(1.05)}
+/* Quick reassurance points */
+.badges{padding:24px 0;background:#fff;border-bottom:1px solid #f0e2da}
+.badges .wrap{display:flex;justify-content:space-around;gap:16px;flex-wrap:wrap;text-align:center;font-size:.88rem;font-weight:500}
+.badges span{color:var(--rose);margin-right:6px}
+
+/* Portfolio */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.ph{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#ead9d0;margin:0}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ph:hover img{transform:scale(1.04)}
+
+/* Reels carousel */
+.alt{background:#fff}
 .reel-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .reel-card{min-width:0}
 .reel{position:relative;aspect-ratio:9/16;border-radius:15px;overflow:hidden;background:#e8d9d2;color:#f3e3dc}
 .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#e8d9d2}
-.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:1.25rem;display:grid;place-items:center;z-index:2;cursor:pointer;box-shadow:0 4px 18px #0002;transition:transform .2s,opacity .2s}
+.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.94);color:var(--ink);font-size:1.25rem;display:grid;place-items:center;z-index:2;cursor:pointer;box-shadow:0 4px 18px #0002;transition:transform .2s,opacity .2s}
 .reel-play:hover{transform:translate(-50%,-50%) scale(1.06)}
 .reel-play[hidden]{display:none}
 .reel-caption{padding:11px 2px 0;text-align:center;font:500 .9rem 'Poppins',sans-serif;color:var(--ink)}
-@media(max-width:700px){.reel-track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-snap-stop:always;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 20px 12px;margin:0 -20px;scroll-padding-left:20px;overscroll-behavior-x:contain}.reel-track::-webkit-scrollbar{display:none}.reel-card{flex:0 0 72%;scroll-snap-align:start}.reel{border-radius:14px}.reel-caption{font-size:.84rem}}
+@media(max-width:700px){
+ .reel-track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-snap-stop:always;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 20px 12px;margin:0 -20px;scroll-padding-left:20px;overscroll-behavior-x:contain}
+ .reel-track::-webkit-scrollbar{display:none}
+ .reel-card{flex:0 0 72%;scroll-snap-align:start}
+ .reel{border-radius:14px}
+ .reel-caption{font-size:.84rem}
+}
 
-/* Services */
-.alt{background:#fff}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.card{background:var(--cream);border-radius:18px;padding:26px;border:1px solid #f0e2da}
-.card .ic{font-size:1.7rem;margin-bottom:10px}
-.card h3{font-size:1.25rem;margin-bottom:8px}
-.card p{color:#6b5555;font-size:.92rem}
-.num{width:38px;height:38px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:12px}
+/* Services: clean expandable cards */
+.services-intro{text-align:center;margin:0 auto 30px}
+.services-intro .lead{margin:0 auto;max-width:700px}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.service-card{background:#fff;border:1px solid #eee1da;border-radius:17px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.service-card[open]{border-color:#d8b6b0;box-shadow:0 10px 28px #6e454414}
+.service-card summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;padding:21px 20px;min-height:86px}
+.service-card summary::-webkit-details-marker{display:none}
+.service-number{font:500 .78rem 'Poppins',sans-serif;color:var(--rose);letter-spacing:.08em;min-width:25px}
+.service-name{font:600 1.08rem 'Playfair Display',serif;flex:1}
+.service-toggle{width:27px;height:27px;border:1px solid #e7d5ce;border-radius:50%;display:grid;place-items:center;color:var(--rose);font-size:1rem;flex:none;transition:transform .2s,background .2s}
+.service-card[open] .service-toggle{transform:rotate(45deg);background:var(--blush)}
+.service-detail{padding:0 20px 21px 58px;color:var(--muted);font-size:.88rem;line-height:1.7}
+.service-detail p{margin:0}
+.services-note{text-align:center;color:var(--muted);font-size:.88rem;margin:24px auto 0;max-width:650px}
+@media(max-width:850px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ section{padding:58px 0}
+ .service-grid{grid-template-columns:1fr;gap:12px}
+ .service-card summary{padding:18px 17px;min-height:76px}
+ .service-detail{padding:0 17px 18px 55px}
+}
 
-/* Enquiry */
+/* About the artist */
+.about{background:#f7eee9}
+.about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:46px;align-items:center}
+.about-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#e8d9d2;max-height:560px}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.about-copy p{color:var(--muted);margin-bottom:16px;max-width:560px}
+.about-signoff{font:italic 1.08rem 'Playfair Display',serif;color:var(--rose);margin-top:20px}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:25px}.about-photo{max-height:460px;aspect-ratio:4/4.5}.about-copy{order:1}}
+
+/* Booking */
 .enq{background:linear-gradient(135deg,#f3e3dc,#ead3c9)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:820px){.split{grid-template-columns:1fr}}
+.form-intro .lead{margin-bottom:18px}
 form{display:grid;gap:14px;background:#fff;padding:26px;border-radius:20px;box-shadow:0 10px 30px #b76e7922}
-label{display:grid;gap:5px;font-size:.85rem;font-weight:500}
-input,select{padding:12px 14px;border:1px solid #e2cfc6;border-radius:12px;font:inherit;background:#fff;width:100%}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:500}
+input,select{padding:12px 14px;border:1px solid #e2cfc6;border-radius:12px;font:inherit;background:#fff;width:100%;color:var(--ink)}
 input:focus,select:focus{outline:2px solid var(--rose);border-color:transparent}
-.note{font-size:.75rem;color:#8a7272}
+.form-note{font-size:.74rem;color:#8a7272;line-height:1.5}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:25px}form{padding:22px}}
+
+/* FAQ */
+.faq-list{max-width:820px;margin:28px auto 0;display:grid;gap:11px}
+.faq-item{background:#fff;border:1px solid #eee1da;border-radius:14px;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;font-weight:500}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';margin-left:auto;color:var(--rose);font-size:1.3rem;line-height:1}
+.faq-item[open] summary::after{content:'−'}
+.faq-answer{padding:0 20px 18px;color:var(--muted);font-size:.88rem;max-width:740px}
 
 /* Footer */
-footer{background:#2a1a1d;color:#e9d9d3;padding:56px 0 24px}
-.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+footer{background:#2a1a1d;color:#e9d9d3;padding:54px 0 24px}
+.fgrid{display:grid;grid-template-columns:1.25fr .8fr .9fr 1fr;gap:28px}
 footer h4{font:600 1rem 'Playfair Display',serif;color:#fff;margin-bottom:12px}
-footer a,footer p{color:#e9d9d3;text-decoration:none;display:block;margin-bottom:6px;font-size:.9rem}
+footer a,footer p{color:#e9d9d3;text-decoration:none;display:block;margin-bottom:7px;font-size:.87rem}
 footer a:hover{color:var(--gold)}
 .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff;font:600 1.15rem 'Playfair Display',serif}
-.copy{border-top:1px solid #4a3236;margin-top:34px;padding-top:18px;font-size:.78rem;color:#b9a29b;text-align:center}
+.footer-tagline{font:italic 1.08rem 'Playfair Display',serif;color:#d8b6b0;margin:12px 0 8px}
+.copy{border-top:1px solid #4a3236;margin-top:32px;padding-top:18px;font-size:.76rem;color:#b9a29b;text-align:center}
+@media(max-width:850px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr 1fr;gap:24px 18px}.fgrid>div:first-child{grid-column:1/-1}}
+
+/* Fixed WhatsApp action */
 .float{position:fixed;right:16px;bottom:18px;z-index:60;box-shadow:0 5px 16px #0003;padding:10px 17px;font-size:.82rem;gap:7px;min-height:42px}
 @media(max-width:600px){.float{right:14px;bottom:18px;padding:9px 15px;font-size:.78rem;min-height:40px}}
-/* Mobile reels horizontal carousel */
-@media (max-width: 600px) {
-  .reel-track {
-    display: flex !important;
-    gap: 18px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 0 20px 12px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .reel-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .reel-card {
-    flex: 0 0 78%;
-    min-width: 78%;
-    scroll-snap-align: center;
-  }
-}
-/* Fix sticky header overlap */
-html {
-  scroll-padding-top: 110px;
-}
-
-#reels {
-  scroll-margin-top: 110px;
-}</style>
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
 
 <!-- Meta Pixel -->
 <script>
@@ -141,7 +173,7 @@ fbq('track','PageView');
 </head>
 <body id="top">
 
-<!-- Logo (replace with <img src="media/logo.png"> if you have a real logo) -->
+<!-- Temporary monogram until Isha's own logo is ready -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="logo" viewBox="0 0 48 48">
     <circle cx="24" cy="24" r="22" fill="none" stroke="#c9a36b" stroke-width="1.5"/>
@@ -152,18 +184,19 @@ fbq('track','PageView');
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top">
+    <a class="brand" href="#top" aria-label="Isha Sethia home">
       <svg width="44" height="44" aria-hidden="true"><use href="#logo"/></svg>
       <span><b>Isha Sethia</b><small>Makeup Artist</small></span>
     </a>
-    <button class="menu" id="menu" aria-label="Open menu">&#9776;</button>
-    <nav id="nav">
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav id="nav" aria-label="Main navigation">
       <a href="#portfolio">Portfolio</a>
       <a href="#reels">Reels</a>
       <a href="#services">Services</a>
-      <a href="#reviews">The Experience</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Book</a>
-      <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20makeup%20services.">WhatsApp</a>
+      <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20makeup%20services.">WhatsApp</a>
     </nav>
   </div>
 </header>
@@ -175,30 +208,39 @@ fbq('track','PageView');
     <h1>Your Day. Your Glow. Perfectly Done.</h1>
     <p class="sub">Bridal, engagement and party makeup, at our studio or at your home anywhere in Jaipur.</p>
     <div class="cta">
-      <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20check%20your%20availability%20for%20my%20date.">Check Your Date on WhatsApp</a>
+      <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20check%20your%20availability%20for%20my%20date.">Check Your Date</a>
       <a class="btn ghost" href="#portfolio">View Portfolio</a>
     </div>
+    <p class="scroll-hint">Scroll to explore services &amp; book your appointment</p>
   </div>
 </section>
 
+<div class="offer-strip" aria-label="Bridal makeup offer">
+  <div class="wrap offer-inner">
+    <span class="offer-kicker">A little something for your big day</span>
+    <span class="offer-copy">Enjoy <strong>10% OFF</strong> on Bridal Makeup</span>
+    <a class="offer-link" href="#contact">Enquire for your wedding date</a>
+  </div>
+</div>
+
 <div class="badges"><div class="wrap">
   <div><span>&#10022;</span> Studio &amp; Home Service</div>
-  <div><span>&#10022;</span> Bridal, Engagement &amp; Party</div>
+  <div><span>&#10022;</span> Makeup for Every Occasion</div>
   <div><span>&#10022;</span> Easy Booking on WhatsApp</div>
 </div></div>
 
 <section id="portfolio"><div class="wrap">
   <p class="eyebrow">Portfolio</p>
   <h2 class="title">Looks We Love</h2>
-  <p class="lead">A few of our recent bridal, engagement and party transformations.</p>
+  <p class="lead">A selection of makeup looks and transformations.</p>
   <div class="gallery">
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-1.jpg" alt="Isha Sethia makeup portfolio look 1" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-2.jpg" alt="Isha Sethia makeup portfolio look 2" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-3.jpg" alt="Isha Sethia makeup portfolio look 3" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-4.jpg" alt="Isha Sethia makeup portfolio look 4" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-5.jpg" alt="Isha Sethia makeup portfolio look 5" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-6.jpg" alt="Isha Sethia makeup portfolio look 6" loading="lazy"></figure>
-    <figure class="ph"><span>Makeup Look</span><img src="media/look-7.jpg" alt="Isha Sethia makeup portfolio look 7" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-1.jpg" alt="Isha Sethia makeup portfolio look 1" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-2.jpg" alt="Isha Sethia makeup portfolio look 2" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-3.jpg" alt="Isha Sethia makeup portfolio look 3" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-4.jpg" alt="Isha Sethia makeup portfolio look 4" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-5.jpg" alt="Isha Sethia makeup portfolio look 5" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-6.jpg" alt="Isha Sethia makeup portfolio look 6" loading="lazy"></figure>
+    <figure class="ph"><img src="media/look-7.jpg" alt="Isha Sethia makeup portfolio look 7" loading="lazy"></figure>
   </div>
 </div></section>
 
@@ -206,7 +248,7 @@ fbq('track','PageView');
   <p class="eyebrow" style="text-align:center">Watch</p>
   <h2 class="title" style="text-align:center">Beauty in Motion</h2>
   <p class="lead" style="text-align:center;margin-left:auto;margin-right:auto">A glimpse of artistry, details and transformations.</p>
-  <div class="reel-track">
+  <div class="reel-track" aria-label="Makeup reels. Swipe to explore.">
     <article class="reel-card">
       <div class="reel"><video playsinline preload="metadata" aria-label="Bridal makeup reel"><source src="media/reel-1.mp4" type="video/mp4"></video><button class="reel-play" type="button" aria-label="Play bridal makeup reel">▶</button></div>
       <p class="reel-caption">Bridal Look</p>
@@ -223,65 +265,119 @@ fbq('track','PageView');
 </div></section>
 
 <section id="services"><div class="wrap">
-  <p class="eyebrow">Services</p>
-  <h2 class="title">Makeup for Every Occasion</h2>
-  <p class="lead">Choose a look that fits your event. We come to you, or you can visit the studio.</p>
-  <div class="cards">
-    <div class="card"><div class="ic">&#128112;</div><h3>Bridal Makeup</h3><p>A flawless, long-lasting look for your wedding day, designed to photograph beautifully.</p></div>
-    <div class="card"><div class="ic">&#128141;</div><h3>Engagement Makeup</h3><p>Soft, radiant glam that looks stunning in photos and on the big stage.</p></div>
-    <div class="card"><div class="ic">&#128132;</div><h3>Party &amp; Guest Makeup</h3><p>Quick, polished makeup for weddings, parties and special evenings.</p></div>
+  <div class="services-intro">
+    <p class="eyebrow">Services</p>
+    <h2 class="title">Every Look, Thoughtfully Created</h2>
+    <p class="lead">From timeless bridal elegance to effortless party glam, explore makeup services crafted to complement your style, occasion and personality.</p>
   </div>
+  <div class="service-grid">
+    <details class="service-card">
+      <summary><span class="service-number">01</span><span class="service-name">Bridal Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A personalised wedding-day look thoughtfully created around your outfit, jewellery, features and bridal style, with a polished finish for your special photographs and celebrations.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">02</span><span class="service-name">Party Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A refined, occasion-ready makeup look for parties, family functions and wedding guests, tailored to the outfit and the kind of glam you feel comfortable wearing.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">03</span><span class="service-name">HD Party Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A carefully blended, camera-conscious party look designed to appear smooth and balanced in photographs while still feeling suited to your personal style.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">04</span><span class="service-name">Haldi / Mehndi Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>Fresh, vibrant makeup for daytime wedding rituals and pre-wedding celebrations, styled to complement colourful outfits and the joyful mood of the occasion.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">05</span><span class="service-name">Carnival Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A more expressive celebration look with room for statement details and bolder styling, planned around the theme, outfit and mood of your event.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">06</span><span class="service-name">Engagement Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>Elegant, photo-ready glam for your ring ceremony, created to complement your engagement outfit and help you feel confident throughout the celebration.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">07</span><span class="service-name">Cocktail Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A sophisticated evening look with defined details and a finish that complements cocktail outfits, event lighting and your preferred level of glamour.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">08</span><span class="service-name">Sangeet Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>Celebration-ready glam for a night of music and performances, styled to work with your outfit and the lively mood of the sangeet.</p></div>
+    </details>
+    <details class="service-card">
+      <summary><span class="service-number">09</span><span class="service-name">Reception Makeup</span><span class="service-toggle" aria-hidden="true">+</span></summary>
+      <div class="service-detail"><p>A graceful, polished look for the reception, tailored to your outfit and occasion so your final wedding celebration feels complete.</p></div>
+    </details>
+  </div>
+  <p class="services-note">Not sure which service suits your event? Share a few details and we’ll help you choose your look.</p>
+  <div style="text-align:center;margin-top:18px"><a class="btn" href="#contact">Find Your Perfect Look</a></div>
 </div></section>
 
-<section class="alt"><div class="wrap">
-  <p class="eyebrow">How It Works</p>
-  <h2 class="title">Booking Is Simple</h2>
-  <div class="cards" style="margin-top:24px">
-    <div class="card"><div class="num">1</div><h3>Share Your Date</h3><p>Tell us your event, date and area on WhatsApp.</p></div>
-    <div class="card"><div class="num">2</div><h3>We Confirm</h3><p>We check availability and share the details with you.</p></div>
-    <div class="card"><div class="num">3</div><h3>Book Your Slot</h3><p>Lock your date and relax. We take care of the rest.</p></div>
+<section id="about" class="about"><div class="wrap about-grid">
+  <div class="about-photo"><img src="media/look-7.jpg" alt="Makeup look by Isha Sethia" loading="lazy"></div>
+  <div class="about-copy">
+    <p class="eyebrow">Meet the Artist</p>
+    <h2 class="title">The Artist Behind Your Look</h2>
+    <p>I believe makeup should feel like you — thoughtfully created to complement your features, outfit and occasion.</p>
+    <p>Whether you love soft, natural elegance or a more defined glam look, my aim is to help you feel confident, comfortable and beautifully yourself.</p>
+    <p class="about-signoff">Where your occasion meets your own style.</p>
+    <a class="btn" href="#contact">Let’s Talk About Your Look</a>
   </div>
-</div></section>
-
-<section id="reviews"><div class="wrap">
-  <p class="eyebrow">The Isha Sethia Experience</p>
-  <h2 class="title">A Look That Feels Like You</h2>
-  <p class="lead">From soft, glowing makeup to statement glam, every look is tailored to your occasion and personal style. Share your event details to discuss your look and availability.</p>
-  <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20makeup%20look.">Discuss Your Look on WhatsApp</a>
 </div></section>
 
 <section id="contact" class="enq"><div class="wrap split">
-  <div>
+  <div class="form-intro">
     <p class="eyebrow">Book Your Date</p>
-    <h2 class="title">Let's Plan Your Look</h2>
-    <p class="lead">Fill in a few details and we'll continue on WhatsApp.</p>
-    <a class="btn wa" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20makeup%20services.">Chat on WhatsApp</a>
+    <h2 class="title">Let’s Create Your Perfect Look</h2>
+    <p class="lead">Share your name, WhatsApp number and the makeup service you’re interested in. We’ll continue the conversation on WhatsApp and discuss your date and availability.</p>
+    <p style="color:var(--muted);font-size:.9rem">Not sure what to choose? Select the closest service and Isha can guide you from there.</p>
   </div>
   <form id="enq">
-    <label>Your name<input name="name" required></label>
-    <label>Event
-      <select name="event" required>
-        <option value="">Select</option>
-        <option>Bridal</option><option>Engagement</option>
-        <option>Party / Wedding guest</option><option>Other</option>
+    <label>Your Name<input name="name" type="text" autocomplete="name" placeholder="Enter your name" required></label>
+    <label>WhatsApp Number<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Enter your WhatsApp number" minlength="8" maxlength="18" required></label>
+    <label>Makeup Service
+      <select name="service" required>
+        <option value="">Select a service</option>
+        <option>Bridal Makeup</option>
+        <option>Party Makeup</option>
+        <option>HD Party Makeup</option>
+        <option>Haldi / Mehndi Makeup</option>
+        <option>Carnival Makeup</option>
+        <option>Engagement Makeup</option>
+        <option>Cocktail Makeup</option>
+        <option>Sangeet Makeup</option>
+        <option>Reception Makeup</option>
+        <option>Not sure yet</option>
       </select>
     </label>
-    <label>Event date<input type="date" name="date"></label>
-    <label>Your area
-      <select name="area" required>
-        <option value="">Select</option>
-        <option>C-Scheme</option><option>Malviya Nagar</option><option>Vaishali Nagar</option>
-        <option>Mansarovar</option><option>Jagatpura</option><option>Raja Park</option>
-        <option>Jawahar Circle</option><option>Vidhyadhar Nagar</option><option>Sodhala</option>
-        <option>Other Jaipur</option><option>Outside Jaipur</option>
-      </select>
-    </label>
-    <label>Makeup at
-      <select name="where"><option>Studio</option><option>My home / venue</option></select>
-    </label>
-    <button class="btn wa" type="submit" style="justify-content:center">Continue on WhatsApp</button>
-    <p class="note">Your details are not stored. They are only used to prepare your WhatsApp message.</p>
+    <button class="btn wa" type="submit">Check My Date</button>
+    <p class="form-note">Your details are not stored on this website. They are used to prepare an enquiry message for WhatsApp. You can review it before sending.</p>
   </form>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div style="text-align:center">
+    <p class="eyebrow">A Few Helpful Details</p>
+    <h2 class="title">Frequently Asked Questions</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">A little more clarity before you book your appointment.</p>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>How can I book my makeup appointment?</summary>
+      <div class="faq-answer">Fill in the short enquiry form or message Isha on WhatsApp. Share your event details and preferred date so availability can be checked.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you provide makeup services at the venue?</summary>
+      <div class="faq-answer">Studio and at-home or venue enquiries are welcome. Share your event location on WhatsApp to confirm service availability and any applicable travel arrangements.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the booking and advance payment process?</summary>
+      <div class="faq-answer">A 50% advance is required to confirm a booking. The remaining balance is payable before the service. Booking terms will be shared while confirming your appointment.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I reschedule my appointment?</summary>
+      <div class="faq-answer">Rescheduling can be discussed and is subject to availability. Please contact Isha as early as possible if your plans change.</div>
+    </details>
+  </div>
 </div></section>
 
 <footer>
@@ -289,106 +385,141 @@ fbq('track','PageView');
     <div class="fgrid">
       <div>
         <div class="fbrand"><svg width="44" height="44" aria-hidden="true"><use href="#logo"/></svg>Isha Sethia</div>
-        <p>Professional makeup artist for bridal, engagement and party looks across Jaipur.</p>
+        <p>Makeup for weddings, celebrations and the moments you want to remember.</p>
+        <p class="footer-tagline">Where Beauty Meets Elegance</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4>Explore</h4>
         <a href="#portfolio">Portfolio</a>
         <a href="#reels">Reels</a>
         <a href="#services">Services</a>
-        <a href="#reviews">The Experience</a>
+        <a href="#about">About Isha</a>
+        <a href="#faq">FAQs</a>
         <a href="#contact">Book Your Date</a>
       </div>
       <div>
-        <h4>Services</h4>
-        <p>Bridal Makeup</p>
-        <p>Engagement Makeup</p>
-        <p>Party &amp; Guest Makeup</p>
-        <p>Studio &amp; Home Service</p>
+        <h4>Makeup Services</h4>
+        <a href="#services">Bridal Makeup</a>
+        <a href="#services">Party &amp; HD Party Makeup</a>
+        <a href="#services">Haldi / Mehndi Makeup</a>
+        <a href="#services">Carnival &amp; Engagement</a>
+        <a href="#services">Cocktail, Sangeet &amp; Reception</a>
       </div>
       <div>
-        <h4>Contact</h4>
-        <a data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20makeup%20services.">WhatsApp: +91 63763 87441</a>
+        <h4>Connect</h4>
+        <a data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20makeup%20services.">WhatsApp: +91 63763 87441</a>
         <a data-ig target="_blank" rel="noopener" href="https://www.instagram.com/makeup_by_ishasethia/">Instagram: @makeup_by_ishasethia</a>
+        <a href="https://share.google/B6s8AisyFnvRdMuGS" target="_blank" rel="noopener">View Studio Location</a>
         <p>Jaipur, Rajasthan, India</p>
         <p>Bookings by appointment</p>
       </div>
     </div>
     <div class="copy">
       &copy; <span id="yr">2026</span> Isha Sethia Makeup Artistry. All rights reserved.<br>
-      This site uses Meta Pixel to measure how our ads perform. The enquiry form only prepares a WhatsApp message in your browser and does not store your details.
+      This website uses Meta Pixel to measure ad performance. Enquiry details are prepared in your browser for WhatsApp and are not stored on this website.
     </div>
   </div>
 </footer>
 
-<a class="btn wa float" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20makeup%20services.">Check Availability</a>
+<a class="btn wa float" data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20check%20availability%20for%20a%20makeup%20appointment.">Check Availability</a>
 
 <script>
 const WA="916376387441";
-const track=(n,p)=>{if(window.fbq)fbq('track',n,p||{})};
-const custom=(n,p)=>{if(window.fbq)fbq('trackCustom',n,p||{})};
+const track=(name,params)=>{if(window.fbq)fbq('track',name,params||{})};
+const custom=(name,params)=>{if(window.fbq)fbq('trackCustom',name,params||{})};
 
 document.getElementById('yr').textContent=new Date().getFullYear();
 
-// Mobile menu
+// Mobile navigation
 const nav=document.getElementById('nav');
-document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const menu=document.getElementById('menu');
+menu.addEventListener('click',()=>{
+  const isOpen=nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded',String(isOpen));
+  menu.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  menu.setAttribute('aria-expanded','false');
+  menu.setAttribute('aria-label','Open menu');
+}));
 
-// Contact event: every WhatsApp button
-document.querySelectorAll('[data-wa]').forEach(a=>a.addEventListener('click',()=>track('Contact')));
+// Track WhatsApp contact clicks and Instagram profile clicks
+ document.querySelectorAll('[data-wa]').forEach(link=>link.addEventListener('click',()=>track('Contact')));
+document.querySelectorAll('[data-ig]').forEach(link=>link.addEventListener('click',()=>custom('InstagramClick')));
 
-// Custom events (for learning custom events and custom conversions)
-document.querySelectorAll('[data-ig]').forEach(a=>a.addEventListener('click',()=>custom('InstagramClick')));
-document.querySelectorAll('.reel').forEach((card,i)=>{
-  const v=card.querySelector('video');
+// Reel play controls: one reel plays at a time
+const reelCards=[...document.querySelectorAll('.reel-card')];
+reelCards.forEach((card,index)=>{
+  const video=card.querySelector('video');
   const play=card.querySelector('.reel-play');
-  if(!v||!play)return;
+  if(!video||!play)return;
   play.addEventListener('click',()=>{
-    if(v.paused){
-      document.querySelectorAll('.reel video').forEach(other=>{if(other!==v)other.pause()});
-      v.play().catch(()=>{play.hidden=false});
-    }else{v.pause()}
+    if(video.paused){
+      document.querySelectorAll('.reel video').forEach(other=>{if(other!==video)other.pause()});
+      video.play().catch(()=>{play.hidden=false});
+    }else{video.pause()}
   });
-  v.addEventListener('play',()=>{play.hidden=true;custom('ReelPlay',{reel:i+1})},{once:true});
-  v.addEventListener('pause',()=>{play.hidden=false});
-  v.addEventListener('ended',()=>{play.hidden=false});
+  video.addEventListener('play',()=>{play.hidden=true;custom('ReelPlay',{reel:index+1})},{once:true});
+  video.addEventListener('pause',()=>{play.hidden=false});
+  video.addEventListener('ended',()=>{play.hidden=false});
 });
-// Always show the first reel when the page opens.
+
+// Start the reels carousel at the first reel when the page loads
 const reelTrack=document.querySelector('.reel-track');
-if(reelTrack){const resetReels=()=>{reelTrack.scrollLeft=0};if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',resetReels,{once:true})}else{resetReels()}}
+if(reelTrack){
+  const resetReels=()=>{reelTrack.scrollLeft=0};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',resetReels,{once:true});
+  else resetReels();
+}
 
-// Hide videos whose file is missing so the placeholder shows
-document.querySelectorAll('video').forEach(v=>{
-  const s=v.querySelector('source');
-  if(s) s.addEventListener('error',()=>{v.style.display='none'});
+// Only one service detail stays expanded at a time
+const serviceCards=[...document.querySelectorAll('.service-card')];
+serviceCards.forEach(card=>card.addEventListener('toggle',()=>{
+  if(card.open)serviceCards.forEach(other=>{if(other!==card)other.open=false});
+}));
+
+// Keep FAQ accordion tidy: one answer open at a time
+const faqItems=[...document.querySelectorAll('.faq-item')];
+faqItems.forEach(item=>item.addEventListener('toggle',()=>{
+  if(item.open)faqItems.forEach(other=>{if(other!==item)other.open=false});
+}));
+
+// ViewContent when portfolio enters the viewport
+const portfolio=document.getElementById('portfolio');
+if('IntersectionObserver' in window&&portfolio){
+  new IntersectionObserver((entries,observer)=>{
+    if(entries[0].isIntersecting){track('ViewContent',{content_name:'Portfolio'});observer.disconnect()}
+  },{threshold:.3}).observe(portfolio);
+}
+
+// Enquiry form: Lead + Schedule + WhatsApp with all three fields pre-filled
+const form=document.getElementById('enq');
+form.addEventListener('submit',event=>{
+  event.preventDefault();
+  if(!form.reportValidity())return;
+  const data=new FormData(form);
+  const name=String(data.get('name')||'').trim();
+  const phone=String(data.get('phone')||'').trim();
+  const service=String(data.get('service')||'').trim();
+  track('Lead',{content_category:service});
+  track('Schedule',{content_name:service});
+  const campaign=new URLSearchParams(window.location.search).get('utm_campaign');
+  const message=[
+    'Hi Isha, I would like to enquire about a makeup appointment.',
+    `Name: ${name}`,
+    `WhatsApp Number: ${phone}`,
+    `Makeup Service: ${service}`,
+    'Please let me know your availability and further details.',
+    campaign?`Reference: ${campaign}`:''
+  ].filter(Boolean).join('\n');
+  window.location.href=`https://wa.me/${WA}?text=${encodeURIComponent(message)}`;
 });
 
-// ViewContent when the portfolio comes into view (once)
-new IntersectionObserver((en,ob)=>{
-  if(en[0].isIntersecting){track('ViewContent',{content_name:'Portfolio'});ob.disconnect();}
-},{threshold:0.3}).observe(document.getElementById('portfolio'));
-
-// Enquiry form: Lead + Schedule, then WhatsApp
-const form=document.getElementById('enq');
-form.elements['date'].min=new Date().toISOString().split('T')[0];
-form.addEventListener('submit',e=>{
-  e.preventDefault();
-  const f=new FormData(form);
-  const ev=f.get('event');
-  const val=ev==='Bridal'?15000:2000; // practice estimate only, not a real lead value
-  track('Lead',{content_category:ev,content_name:f.get('area'),value:val,currency:'INR'});
-  if(f.get('date')) track('Schedule');
-  const ref=new URLSearchParams(location.search).get('utm_campaign');
-  const msg=[
-    `Hi, I'm ${f.get('name')}.`,
-    `Event: ${ev}`,
-    `Date: ${f.get('date')||'not decided yet'}`,
-    `Area: ${f.get('area')}`,
-    `Makeup at: ${f.get('where')}`,
-    ref?`Ref: ${ref}`:''
-  ].filter(Boolean).join('\n');
-  setTimeout(()=>{location.href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`},400);
+// Hide a reel video only if its media file cannot be loaded
+ document.querySelectorAll('.reel video').forEach(video=>{
+  const source=video.querySelector('source');
+  if(source)source.addEventListener('error',()=>{video.closest('.reel').style.background='#ead9d0'});
 });
 </script>
 </body>
