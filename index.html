@@ -64,9 +64,11 @@ nav a{color:var(--ink);text-decoration:none;font-size:.88rem}
 .reel-card{min-width:0}
 .reel{position:relative;aspect-ratio:9/16;border-radius:15px;overflow:hidden;background:#e8d9d2;color:#f3e3dc}
 .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#e8d9d2}
+.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:1.25rem;display:grid;place-items:center;z-index:2;cursor:pointer;box-shadow:0 4px 18px #0002;transition:transform .2s,opacity .2s}
+.reel-play:hover{transform:translate(-50%,-50%) scale(1.06)}
+.reel-play[hidden]{display:none}
 .reel-caption{padding:11px 2px 0;text-align:center;font:500 .9rem 'Poppins',sans-serif;color:var(--ink)}
-.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:var(--ink);font-size:1.1rem;display:grid;place-items:center;z-index:2;cursor:pointer}
-@media(max-width:700px){.reel-track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 20px 12px;margin:0 -20px}.reel-track::-webkit-scrollbar{display:none}.reel-card{flex:0 0 72%;scroll-snap-align:start}.reel{border-radius:14px}.reel-caption{font-size:.84rem}}
+@media(max-width:700px){.reel-track{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-snap-stop:always;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 20px 12px;margin:0 -20px;scroll-padding-left:20px;overscroll-behavior-x:contain}.reel-track::-webkit-scrollbar{display:none}.reel-card{flex:0 0 72%;scroll-snap-align:start}.reel{border-radius:14px}.reel-caption{font-size:.84rem}}
 
 /* Services */
 .alt{background:#fff}
@@ -97,6 +99,29 @@ footer a:hover{color:var(--gold)}
 .copy{border-top:1px solid #4a3236;margin-top:34px;padding-top:18px;font-size:.78rem;color:#b9a29b;text-align:center}
 .float{position:fixed;right:16px;bottom:18px;z-index:60;box-shadow:0 5px 16px #0003;padding:10px 17px;font-size:.82rem;gap:7px;min-height:42px}
 @media(max-width:600px){.float{right:14px;bottom:18px;padding:9px 15px;font-size:.78rem;min-height:40px}}
+/* Mobile reels horizontal carousel */
+@media (max-width: 600px) {
+  .reel-track {
+    display: flex !important;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 20px 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .reel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reel-card {
+    flex: 0 0 78%;
+    min-width: 78%;
+    scroll-snap-align: center;
+  }
+}
 </style>
 
 <!-- Meta Pixel -->
@@ -176,15 +201,15 @@ fbq('track','PageView');
   <p class="lead" style="text-align:center;margin-left:auto;margin-right:auto">A glimpse of artistry, details and transformations.</p>
   <div class="reel-track">
     <article class="reel-card">
-      <div class="reel"><video controls playsinline preload="metadata" aria-label="Bridal makeup reel"><source src="media/reel-1.mp4" type="video/mp4"></video></div>
+      <div class="reel"><video playsinline preload="metadata" aria-label="Bridal makeup reel"><source src="media/reel-1.mp4" type="video/mp4"></video><button class="reel-play" type="button" aria-label="Play bridal makeup reel">▶</button></div>
       <p class="reel-caption">Bridal Look</p>
     </article>
     <article class="reel-card">
-      <div class="reel"><video controls playsinline preload="metadata" aria-label="Makeup tutorial reel"><source src="media/reel-2.mp4" type="video/mp4"></video></div>
+      <div class="reel"><video playsinline preload="metadata" aria-label="Makeup tutorial reel"><source src="media/reel-2.mp4" type="video/mp4"></video><button class="reel-play" type="button" aria-label="Play makeup tutorial reel">▶</button></div>
       <p class="reel-caption">Makeup Tutorial</p>
     </article>
     <article class="reel-card">
-      <div class="reel"><video controls playsinline preload="metadata" aria-label="Makeup transition reel"><source src="media/reel-3.mp4" type="video/mp4"></video></div>
+      <div class="reel"><video playsinline preload="metadata" aria-label="Makeup transition reel"><source src="media/reel-3.mp4" type="video/mp4"></video><button class="reel-play" type="button" aria-label="Play glam transformation reel">▶</button></div>
       <p class="reel-caption">Glam Transformation</p>
     </article>
   </div>
@@ -308,7 +333,23 @@ document.querySelectorAll('[data-wa]').forEach(a=>a.addEventListener('click',()=
 
 // Custom events (for learning custom events and custom conversions)
 document.querySelectorAll('[data-ig]').forEach(a=>a.addEventListener('click',()=>custom('InstagramClick')));
-document.querySelectorAll('.reel video').forEach((v,i)=>v.addEventListener('play',()=>custom('ReelPlay',{reel:i+1}),{once:true}));
+document.querySelectorAll('.reel').forEach((card,i)=>{
+  const v=card.querySelector('video');
+  const play=card.querySelector('.reel-play');
+  if(!v||!play)return;
+  play.addEventListener('click',()=>{
+    if(v.paused){
+      document.querySelectorAll('.reel video').forEach(other=>{if(other!==v)other.pause()});
+      v.play().catch(()=>{play.hidden=false});
+    }else{v.pause()}
+  });
+  v.addEventListener('play',()=>{play.hidden=true;custom('ReelPlay',{reel:i+1})},{once:true});
+  v.addEventListener('pause',()=>{play.hidden=false});
+  v.addEventListener('ended',()=>{play.hidden=false});
+});
+// Always show the first reel when the page opens.
+const reelTrack=document.querySelector('.reel-track');
+if(reelTrack){const resetReels=()=>{reelTrack.scrollLeft=0};if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',resetReels,{once:true})}else{resetReels()}}
 
 // Hide videos whose file is missing so the placeholder shows
 document.querySelectorAll('video').forEach(v=>{
