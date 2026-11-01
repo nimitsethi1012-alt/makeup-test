@@ -122,7 +122,14 @@ footer a:hover{color:var(--gold)}
     scroll-snap-align: center;
   }
 }
-</style>
+/* Fix sticky header overlap */
+html {
+  scroll-padding-top: 110px;
+}
+
+#reels {
+  scroll-margin-top: 110px;
+}</style>
 
 <!-- Meta Pixel -->
 <script>
