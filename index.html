@@ -157,6 +157,14 @@ footer a:hover{color:var(--gold)}
 @media(max-width:850px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.fgrid{grid-template-columns:1fr 1fr;gap:24px 18px}.fgrid>div:first-child{grid-column:1/-1}}
 
+
+.social-links{display:flex;align-items:center;gap:11px;margin:5px 0 17px}
+.social-icon{width:42px;height:42px;border:1px solid #72545a;border-radius:50%;display:grid;place-items:center;color:#f4e8e3;transition:background .2s,border-color .2s,color .2s,transform .2s;margin:0}
+.social-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.social-icon .social-fill,.social-icon .social-dot{fill:currentColor;stroke:none}
+.social-icon:hover{background:#b76e79;border-color:#b76e79;color:#fff;transform:translateY(-2px)}
+footer p.connect-note{margin-bottom:5px;font-size:.82rem;color:#cbb9b4}
+
 /* Fixed WhatsApp action */
 .float{position:fixed;right:16px;bottom:18px;z-index:60;box-shadow:0 5px 16px #0003;padding:10px 17px;font-size:.82rem;gap:7px;min-height:42px}
 @media(max-width:600px){.float{right:14px;bottom:18px;padding:9px 15px;font-size:.78rem;min-height:40px}}
@@ -313,8 +321,9 @@ fbq('track','PageView');
 </div></section>
 
 <section id="about" class="about"><div class="wrap about-grid">
-<div class="about-photo"><img src="media/isha-about.jpg" alt="Isha Sethia - Makeup Artist" loading="lazy"></div>
-<div class="about-copy">    <p class="eyebrow">Meet the Artist</p>
+  <div class="about-photo"><img src="media/isha-about.jpg" alt="Isha Sethia, makeup artist" loading="lazy"></div>
+  <div class="about-copy">
+    <p class="eyebrow">Meet the Artist</p>
     <h2 class="title">The Artist Behind Your Look</h2>
     <p>I believe makeup should feel like you — thoughtfully created to complement your features, outfit and occasion.</p>
     <p>Whether you love soft, natural elegance or a more defined glam look, my aim is to help you feel confident, comfortable and beautifully yourself.</p>
@@ -406,11 +415,22 @@ fbq('track','PageView');
       </div>
       <div>
         <h4>Connect</h4>
-        <a data-wa target="_blank" rel="noopener" href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20makeup%20services.">WhatsApp: +91 63763 87441</a>
-        <a data-ig target="_blank" rel="noopener" href="https://www.instagram.com/makeup_by_ishasethia/">Instagram: @makeup_by_ishasethia</a>
-        <a href="https://share.google/B6s8AisyFnvRdMuGS" target="_blank" rel="noopener">View Studio Location</a>
-        <p>Jaipur, Rajasthan, India</p>
-        <p>Bookings by appointment</p>
+        <div class="social-links" aria-label="Connect with Isha Sethia">
+          <a class="social-icon" data-ig href="https://www.instagram.com/makeup_by_ishasethia/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-dot" cx="17.5" cy="6.5" r="1"></circle></svg>
+          </a>
+          <a class="social-icon" data-fb href="https://www.facebook.com/Makeupbyishasethia" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="social-fill" d="M14.1 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.2H8.2V13h2.7v8z"></path></svg>
+          </a>
+          <a class="social-icon" data-wa href="https://wa.me/916376387441?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20makeup%20services." target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.2-4A8.2 8.2 0 1 1 20.2 11.7Z"></path><path d="M9 8.2c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.9-3.5-2-1.1-1-1.9-2.3-2.1-3.3-.2-.8.1-1.5.7-2.4Z"></path></svg>
+          </a>
+          <a class="social-icon" href="https://share.google/B6s8AisyFnvRdMuGS" target="_blank" rel="noopener" aria-label="Studio location on Google Maps" title="Studio Location">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5.2-8 12-8 12S4 15.2 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+          </a>
+        </div>
+        <p class="connect-note">Jaipur, Rajasthan, India</p>
+        <p class="connect-note">Bookings by appointment</p>
       </div>
     </div>
     <div class="copy">
@@ -446,6 +466,8 @@ nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
 // Track WhatsApp contact clicks and Instagram profile clicks
  document.querySelectorAll('[data-wa]').forEach(link=>link.addEventListener('click',()=>track('Contact')));
 document.querySelectorAll('[data-ig]').forEach(link=>link.addEventListener('click',()=>custom('InstagramClick')));
+document.querySelectorAll('[data-fb]').forEach(link=>link.addEventListener('click',()=>custom('FacebookClick')));
+
 
 // Reel play controls: one reel plays at a time
 const reelCards=[...document.querySelectorAll('.reel-card')];
