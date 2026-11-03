@@ -183,7 +183,21 @@ footer p.connect-note{margin-bottom:5px;font-size:.82rem;color:#cbb9b4}
 .float{position:fixed;right:16px;bottom:18px;z-index:60;box-shadow:0 5px 16px #0003;padding:10px 17px;font-size:.82rem;gap:7px;min-height:42px}
 @media(max-width:600px){.float{right:14px;bottom:18px;padding:9px 15px;font-size:.78rem;min-height:40px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-</style>
+/* Official Isha Sethia Logo */
+.header-logo {
+  width: 110px;
+  height: 68px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    width: 100px;
+    height: 62px;
+  }
+}</style>
 
 <!-- Meta Pixel -->
 <script>
@@ -207,9 +221,12 @@ fbq('track','PageView');
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Isha Sethia home">
-      <svg width="44" height="44" aria-hidden="true"><use href="#logo"/></svg>
-      <span><b>Isha Sethia</b><small>Makeup Artist</small></span>
-    </a>
+  <img
+    src="media/isha-logo.png"
+    alt="Isha Makeup Artist"
+    class="header-logo"
+  >
+</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <nav id="nav" aria-label="Main navigation">
       <a href="#portfolio">Portfolio</a>
