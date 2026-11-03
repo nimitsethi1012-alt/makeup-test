@@ -70,10 +70,24 @@ nav a:hover{color:var(--rose)}
 .badges span{color:var(--rose);margin-right:6px}
 
 /* Portfolio */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.ph{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#ead9d0;margin:0}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.ph:hover img{transform:scale(1.04)}
+.portfolio-carousel{position:relative}
+.portfolio-track{display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 14px;scroll-snap-type:x mandatory;scroll-snap-stop:always;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scroll-behavior:smooth}
+.portfolio-track::-webkit-scrollbar{display:none}
+.portfolio-slide{position:relative;flex:0 0 calc((100% - 36px)/3);min-width:0;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:#ead9d0;margin:0;scroll-snap-align:start}
+.portfolio-slide img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.portfolio-slide:hover img{transform:scale(1.035)}
+.portfolio-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:12px}
+.portfolio-count{min-width:58px;text-align:center;color:var(--muted);font-size:.78rem;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:.08em}
+.portfolio-arrow{width:40px;height:40px;border:1px solid #dfc9c1;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font:500 1.15rem 'Poppins',sans-serif;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.portfolio-arrow:hover{background:var(--blush);border-color:var(--rose);transform:translateY(-1px)}
+.portfolio-arrow:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.portfolio-arrow:disabled{opacity:.38;cursor:not-allowed;transform:none}
+@media(max-width:700px){
+ .portfolio-track{gap:14px;padding:2px 11% 14px;margin:0 -20px;scroll-padding-inline:11%;}
+ .portfolio-slide{flex:0 0 78%;scroll-snap-align:center;border-radius:15px}
+ .portfolio-controls{margin-top:8px}
+ .portfolio-arrow{width:38px;height:38px}
+}
 
 /* Reels carousel */
 .alt{background:#fff}
@@ -241,14 +255,23 @@ fbq('track','PageView');
   <p class="eyebrow">Portfolio</p>
   <h2 class="title">Looks We Love</h2>
   <p class="lead">A selection of makeup looks and transformations.</p>
-  <div class="gallery">
-    <figure class="ph"><img src="media/look-1.jpg" alt="Isha Sethia makeup portfolio look 1" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-2.jpg" alt="Isha Sethia makeup portfolio look 2" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-3.jpg" alt="Isha Sethia makeup portfolio look 3" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-4.jpg" alt="Isha Sethia makeup portfolio look 4" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-5.jpg" alt="Isha Sethia makeup portfolio look 5" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-6.jpg" alt="Isha Sethia makeup portfolio look 6" loading="lazy"></figure>
-    <figure class="ph"><img src="media/look-7.jpg" alt="Isha Sethia makeup portfolio look 7" loading="lazy"></figure>
+  <div class="portfolio-carousel" aria-label="Isha Sethia makeup portfolio slider">
+    <div class="portfolio-track" id="portfolioTrack" tabindex="0" aria-label="Nine unique makeup portfolio photos. Swipe or use the arrows to browse.">
+    <figure class="portfolio-slide"><img src="media/portfolio-01.jpg" alt="Red bridal makeup with traditional jewellery" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-02.jpg" alt="Close-up of detailed eye makeup" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-03.jpg" alt="Blue occasion look with soft glam makeup" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-04.jpg" alt="Statement evening glam with pink detail" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-05.jpg" alt="Soft glam makeup with elegant hairstyle" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-06.jpg" alt="Defined glam makeup portrait" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-07.jpg" alt="Ivory bridal look with green jewellery" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-08.jpg" alt="Classic red bridal portrait" loading="lazy" decoding="async"></figure>
+    <figure class="portfolio-slide"><img src="media/portfolio-09.jpg" alt="Outdoor bridal look in red attire" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="portfolio-controls" aria-label="Portfolio slider controls">
+      <span class="portfolio-count" id="portfolioCount" aria-live="polite">01 / 09</span>
+      <button class="portfolio-arrow" id="portfolioPrev" type="button" aria-label="Previous portfolio photo" disabled>‹</button>
+      <button class="portfolio-arrow" id="portfolioNext" type="button" aria-label="Next portfolio photo">›</button>
+    </div>
   </div>
 </div></section>
 
@@ -492,6 +515,46 @@ if(reelTrack){
   const resetReels=()=>{reelTrack.scrollLeft=0};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',resetReels,{once:true});
   else resetReels();
+}
+
+// Portfolio photo slider: swipe on touch screens and use arrows on desktop.
+const portfolioTrack=document.getElementById('portfolioTrack');
+const portfolioSlides=portfolioTrack?[...portfolioTrack.querySelectorAll('.portfolio-slide')]:[];
+const portfolioCount=document.getElementById('portfolioCount');
+const portfolioPrev=document.getElementById('portfolioPrev');
+const portfolioNext=document.getElementById('portfolioNext');
+let portfolioScrollFrame=0;
+function portfolioActiveIndex(){
+  if(!portfolioTrack||!portfolioSlides.length)return 0;
+  const left=portfolioTrack.getBoundingClientRect().left;
+  let best=0, distance=Infinity;
+  portfolioSlides.forEach((slide,index)=>{
+    const d=Math.abs(slide.getBoundingClientRect().left-left);
+    if(d<distance){distance=d;best=index;}
+  });
+  return best;
+}
+function updatePortfolioControls(){
+  if(!portfolioSlides.length)return;
+  const index=portfolioActiveIndex();
+  if(portfolioCount)portfolioCount.textContent=`${String(index+1).padStart(2,'0')} / ${String(portfolioSlides.length).padStart(2,'0')}`;
+  if(portfolioPrev)portfolioPrev.disabled=index===0;
+  if(portfolioNext)portfolioNext.disabled=index>=portfolioSlides.length-1;
+}
+function movePortfolio(direction){
+  const index=portfolioActiveIndex();
+  const nextIndex=Math.max(0,Math.min(portfolioSlides.length-1,index+direction));
+  portfolioSlides[nextIndex]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:window.matchMedia('(max-width: 700px)').matches?'center':'start'});
+}
+if(portfolioTrack&&portfolioSlides.length){
+  portfolioPrev?.addEventListener('click',()=>movePortfolio(-1));
+  portfolioNext?.addEventListener('click',()=>movePortfolio(1));
+  portfolioTrack.addEventListener('scroll',()=>{
+    if(portfolioScrollFrame)cancelAnimationFrame(portfolioScrollFrame);
+    portfolioScrollFrame=requestAnimationFrame(updatePortfolioControls);
+  },{passive:true});
+  window.addEventListener('resize',updatePortfolioControls,{passive:true});
+  updatePortfolioControls();
 }
 
 // Only one service detail stays expanded at a time
