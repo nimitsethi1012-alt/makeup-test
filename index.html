@@ -206,7 +206,13 @@ fbq('init','1124506453498727');
 fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1124506453498727&ev=PageView&noscript=1"></noscript>
-</head>
+<!-- Prioritize hero video poster for faster loading -->
+<link
+  rel="preload"
+  as="image"
+  href="media/hero-poster.jpg"
+  fetchpriority="high"
+></head>
 <body id="top">
 
 <!-- Temporary monogram until Isha's own logo is ready -->
